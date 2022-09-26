@@ -24,7 +24,7 @@ function ContactForm(props) {
   const formOnSubmitHandler = (event) => {
     event.preventDefault();
     props.fnAddContacts(inputContact);
-    setContactInfo('');
+    setContactInfo({ photo: 'http://placekitten.com/600' });
   };
 
   return (

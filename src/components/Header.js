@@ -31,10 +31,10 @@ const Header = () => {
 
   return (
     <>
-      <Typography variant="h3">Call A friend</Typography>
+      <Typography variant="h3">Call A friend - MiChat</Typography>
       <Typography variant="subtitle1">Your Friendly contact app</Typography>
       <Divider />
-      <Grid container spacing={6}>
+      <Grid mt={2} ml={3} container spacing={6}>
         <Grid item xs={6}>
           <ContactForm fnAddContacts={addContacts} />
         </Grid>
