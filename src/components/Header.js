@@ -16,7 +16,7 @@ const Header = () => {
 
   // fungsi tambah contact
   const addContacts = (newContact) => {
-    const newId = contacts[contacts.length - 1].id + 1;
+    // const newId = contacts[contacts.length - 1].id + 1;
 
     const ObjContact = {
       name: newContact.name,
