@@ -1,6 +1,6 @@
 // Kalian bisa menambahkan CSS di src/components/Header.css
 // atau langsung tambahkan dengan sx={{}}
-import { Grid, Typography } from '@mui/material';
+import { Divider, Grid, Typography } from '@mui/material';
 import React, { useState } from 'react';
 
 import contactsJSON from '../data/contacts.json';
@@ -19,7 +19,6 @@ const Header = () => {
     const newId = contacts[contacts.length - 1].id + 1;
 
     const ObjContact = {
-      id: newId,
       name: newContact.name,
       phone: newContact.phone,
       email: newContact.email,
@@ -34,6 +33,7 @@ const Header = () => {
     <>
       <Typography variant="h3">Call A friend</Typography>
       <Typography variant="subtitle1">Your Friendly contact app</Typography>
+      <Divider />
       <Grid container spacing={6}>
         <Grid item xs={6}>
           <ContactForm fnAddContacts={addContacts} />

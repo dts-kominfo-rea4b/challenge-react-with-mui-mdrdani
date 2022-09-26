@@ -8,6 +8,7 @@ import {
   ListItemAvatar,
   ListItemText,
   Avatar,
+  Typography,
 } from '@mui/material';
 // import { ImageIcon } from '@mui/icons-material/Image';
 
@@ -26,8 +27,26 @@ function Contact(props) {
           </ListItemAvatar>
           <ListItemText
             primary={contact.name}
-            secondary={contact.phone}
-            third={contact.email}
+            secondary={
+              <React.Fragment>
+                <Typography
+                  sx={{ display: 'block' }}
+                  component="span"
+                  variant="body2"
+                  color="text.primary"
+                >
+                  {contact.phone}
+                </Typography>
+
+                <Typography
+                  component="span"
+                  variant="body2"
+                  color="text.primary"
+                >
+                  {contact.email}
+                </Typography>
+              </React.Fragment>
+            }
           />
         </ListItem>
       ))}

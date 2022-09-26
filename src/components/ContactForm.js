@@ -9,15 +9,15 @@ function ContactForm(props) {
   // Form berisi name, phone, email, dan photo url
   // Buatlah state newContact berupa objek sesuai dengan data yang ada
   const [inputContact, setContactInfo] = useState({
-    name: '',
-    phone: '',
-    email: '',
-    photo: '',
+    photo: 'http://placekitten.com/600',
   });
 
   // fungsi untuk menerima inputan
   const inputOnChangeHandler = (event) => {
-    setContactInfo(event.target.value);
+    // setContactInfo(event.target.value);
+    const name = event.target.name;
+    const value = event.target.value;
+    setContactInfo((values) => ({ ...values, [name]: value }));
   };
 
   // fungsi handler
@@ -36,7 +36,8 @@ function ContactForm(props) {
               fullWidth
               type="text"
               style={{ marginBottom: '0.5em' }}
-              value={inputContact.name}
+              name="name"
+              value={inputContact.name || ''}
               onChange={inputOnChangeHandler}
               label="Name *"
               variant="outlined"
@@ -49,7 +50,8 @@ function ContactForm(props) {
               label="Phone *"
               variant="outlined"
               style={{ marginBottom: '0.5em' }}
-              value={inputContact.phone}
+              name="phone"
+              value={inputContact.phone || ''}
               onChange={inputOnChangeHandler}
             />
           </Grid>
@@ -60,7 +62,8 @@ function ContactForm(props) {
               label="Email *"
               variant="outlined"
               style={{ marginBottom: '0.5em' }}
-              value={inputContact.email}
+              name="email"
+              value={inputContact.email || ''}
               onChange={inputOnChangeHandler}
             />
           </Grid>
@@ -71,7 +74,8 @@ function ContactForm(props) {
               label="Photo URL *"
               variant="outlined"
               style={{ marginBottom: '0.5em' }}
-              value={inputContact.phone}
+              name="photo"
+              value={inputContact.photo || ''}
               onChange={inputOnChangeHandler}
             />
           </Grid>
