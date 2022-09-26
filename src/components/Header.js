@@ -31,7 +31,7 @@ const Header = () => {
 
   return (
     <>
-      <Typography variant="h3">Call A friend - MiChat</Typography>
+      <Typography variant="h3">Call A friend</Typography>
       <Typography variant="subtitle1">Your Friendly contact app</Typography>
       <Divider />
       <Grid mt={2} ml={3} container spacing={6}>
