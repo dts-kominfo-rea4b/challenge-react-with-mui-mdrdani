@@ -13,7 +13,7 @@ const App = () => {
   // Buatlah handler untuk menambahkan kontak baru yang akan dikirim ke ContactForm
 
   return (
-    <div className="App">
+    <div className="App" style={{ margin: '4em' }}>
       <Header />
     </div>
   );
